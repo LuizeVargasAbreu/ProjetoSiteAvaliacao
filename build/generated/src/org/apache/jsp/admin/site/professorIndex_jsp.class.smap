@@ -1,0 +1,28 @@
+SMAP
+professorIndex_jsp.java
+JSP
+*S JSP
+*F
++ 0 professorIndex.jsp
+admin/site/professorIndex.jsp
++ 1 cabecalho.jsp
+admin/site/cabecalho.jsp
++ 2 rodape.jsp
+admin/site/rodape.jsp
+*L
+1,4:53
+1#1,121:56
+4#0:177
+7,4:180
+10,8:184
+18:192,3
+19,2:195
+21,2:198
+22:200
+23:201,6
+24:207
+25,2:209
+26,20:211
+1#2,19:231
+45#0:249
+*E
