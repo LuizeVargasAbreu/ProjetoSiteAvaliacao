@@ -36,13 +36,11 @@
         List<Questionario> qList = qdao.listar();
         Questionario q = qList.get(0);
         
-
-        Monitor objMon = new Monitor();
-        
-                
-        MoniAvalDAO dao = new MoniAvalDAO();
         MoniAval obj = new MoniAval();
-
+        MoniAvalDAO dao = new MoniAvalDAO();
+        
+        Monitor objMon = new Monitor();
+  
         obj.setMaResposta1(rdoPergunta);
         obj.setMaResposta2(rdoPergunta2);
         obj.setMaResposta3(rdoPergunta3);

@@ -54,9 +54,9 @@
         pa.setPaResposta8(v_resposta8);
         pa.setPaResposta9(v_resposta9);
         pa.setPaResposta10(v_resposta10);
+        pa.setPaPeriodo(maPeriodo);
         objProf.setIdProfessor(idProfessor);
         pa.setIdProfessor(objProf);
-        pa.setPaPeriodo(maPeriodo);
         pa.setIdQuestionario(q);
 
         paDAO.incluir(pa);

@@ -15,9 +15,9 @@
 
     List<Monitor> mList = monitDAO.listar();
 
-    Questionario q;
-    MoniAval moa = new MoniAval();
     
+    MoniAval moa = new MoniAval();
+    Questionario q;
     QuestionarioDAO qdao = new QuestionarioDAO();
 
     List<Questionario> qList = qdao.listar();
