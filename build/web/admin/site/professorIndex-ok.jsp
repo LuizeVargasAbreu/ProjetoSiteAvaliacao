@@ -20,13 +20,23 @@
         BigInteger num1 = profAval.getPaResposta1();
         BigInteger num2 = profAval.getPaResposta2();
         BigInteger num3 = profAval.getPaResposta3();
-        BigInteger media;
-         media = num1.add (num2).add (num3);
-           
-
-        
-        
-         //  System.out.println(num1 + " + " + num2 + " = " + (num1 + num2) );
+        BigInteger num4 = profAval.getPaResposta4();
+        BigInteger num5 = profAval.getPaResposta5();
+        BigInteger num6 = profAval.getPaResposta6();
+        BigInteger num7 = profAval.getPaResposta7();
+        BigInteger num8 = profAval.getPaResposta8();
+        BigInteger num9 = profAval.getPaResposta9();
+        BigInteger num10 = profAval.getPaResposta10();
+    
+      
+        BigInteger media = num1.add (num2).add (num3).add (num4).add (num5).add (num6).add (num7).add (num8).add (num9).add (num10);
+        BigInteger num;
+        BigInteger numm;
+        num = new BigInteger("10");
+        BigInteger media2 = media.divide(num); 
+        numm = new BigInteger("2");
+        BigInteger media3 = media2.multiply(numm); 
+        System.out.println(media3);
         }
         ;
         
