@@ -4,7 +4,12 @@
 <%@page import="java.math.BigInteger"%>
 <%@page import="modelo.ProfAval"%>
 <%@page import="modelo.Professor"%>
+<%@include file="cabecalho.jsp"%>
 <%
+    String msg = "";
+    BigInteger teste;
+    teste= new BigInteger("0");
+    
 
     ProfAvalDAO dao2 = new ProfAvalDAO();
     List<ProfAval> lista2;
@@ -53,16 +58,26 @@
                     BigInteger media;
                     media = num1.add(num2).add(num3).add(num4).add(num5).add(num6).add(num7).add(num8).add(num9).add(num10);
                     BigInteger num;
-                    BigInteger numm;
+                    BigInteger numero;
                     num = new BigInteger("10");
                     BigInteger media2 = media.divide(num);
-                    numm = new BigInteger("2");
-                    BigInteger media3 = media2.multiply(numm);
-                    System.out.println(media3);
+                    numero = new BigInteger("2");
+                    teste = media2.multiply(numero);
+                    
+    
                 }
             }
         }
     }
+    
+    
 
 
 %>
+   <h1 class="centro">Média dos professores</h1>
+   Média:<%=teste%><br />
+  <a href="index.jsp">Voltar para página incial</a>
+         
+    </body>
+</html>
+ <%@include file="rodape.jsp"%>

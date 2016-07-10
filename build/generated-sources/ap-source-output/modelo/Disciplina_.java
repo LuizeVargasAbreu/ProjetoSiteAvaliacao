@@ -7,7 +7,7 @@ import modelo.Curso;
 import modelo.Monitor;
 import modelo.Professor;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2016-07-10T18:33:16")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2016-07-10T19:41:43")
 @StaticMetamodel(Disciplina.class)
 public class Disciplina_ { 
 
