@@ -24,8 +24,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "professor")
 @NamedQueries({
-    @NamedQuery(name = "Professor.findAll", query = "SELECT p FROM Professor p"),
-@NamedQuery(name = "Professor.findByName", query = "SELECT p FROM Professor p where p.nome like :nome")
+    @NamedQuery(name = "Professor.findAll", query = "SELECT p FROM Professor p")
 })
 
 public class Professor implements Serializable {
