@@ -17,10 +17,10 @@
             BigInteger num1 = profAval.getPaResposta1();
             BigInteger num2 = profAval.getPaResposta2();
             BigInteger num3 = profAval.getPaResposta3();
-           
-            BigInteger teste = new BigInteger("100");
-            System.out.println(teste);
-        //     System.out.println(num1 + " + " + num2 + " = " + (num1 + num2) );
+       
+        
+            
+          //  System.out.println(num1 + " + " + num2 + " = " + (num1 + num2) );
         }
         ;
         

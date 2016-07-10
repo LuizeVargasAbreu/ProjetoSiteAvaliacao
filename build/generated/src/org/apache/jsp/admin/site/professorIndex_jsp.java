@@ -50,9 +50,9 @@ public final class professorIndex_jsp extends org.apache.jasper.runtime.HttpJspB
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("\r\n");
@@ -174,6 +174,7 @@ public final class professorIndex_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        </div>\r\n");
       out.write("    </body>\r\n");
       out.write("</html>");
+      out.write('\r');
       out.write('\n');
 
     // Pesquisar o nome do professor e lhe entregar sua média geral de avaliação
@@ -181,52 +182,52 @@ public final class professorIndex_jsp extends org.apache.jasper.runtime.HttpJspB
     ProfessorDAO profDAO = new ProfessorDAO();
     List<Professor> pList = profDAO.listar();
 
-      out.write("\n");
-      out.write("\n");
-      out.write("<body>\n");
-      out.write("        <div class=\"pergunta\">\n");
-      out.write("            <div class=\"opcoes\">\n");
-      out.write("                <form action=\"professorIndex-ok.jsp\" method=\"post\">\n");
-      out.write("                    <div class=\"form-group\">\n");
-      out.write("                        <label>Selecione o professor que você deseja saber a média de seu desempenho</label>\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<body>\r\n");
+      out.write("        <div class=\"pergunta\">\r\n");
+      out.write("            <div class=\"opcoes\">\r\n");
+      out.write("                <form action=\"professorIndex-ok.jsp\" method=\"post\">\r\n");
+      out.write("                    <div class=\"form-group\">\r\n");
+      out.write("                        <label>Selecione o professor que você deseja saber a média de seu desempenho</label>\r\n");
       out.write("                        <select class=\"form-control\" id=\"idProfessor\" name=\"idProfessor\" value=\"");
       out.print(profe.getIdProfessor());
-      out.write("\">\n");
-      out.write("                            <option value=\"\">Selecione..</option>\n");
+      out.write("\">\r\n");
+      out.write("                            <option value=\"\">Selecione..</option>\r\n");
       out.write("                            ");
 
                                 for (Professor p : pList) {
                             
-      out.write("\n");
+      out.write("\r\n");
       out.write("                            <option value=\"");
       out.print(p.getIdProfessor());
       out.write('"');
       out.write('>');
       out.print(p);
-      out.write("</option>\n");
+      out.write("</option>\r\n");
       out.write("                        ");
 
                             }
                         
-      out.write("\n");
-      out.write("                        </select>\n");
-      out.write("                        \n");
-      out.write("                    </div>\n");
-      out.write("                        <br/>\n");
-      out.write("                    <hr/>\n");
-      out.write("                    <input type=\"submit\" value=\"Saber média\" name=\"btnConfirmar\"  /> \n");
-      out.write("              \n");
-      out.write("                \n");
-      out.write("            </div>\n");
-      out.write("        \n");
-      out.write("        <div class=\"painelUsuario\">\n");
-      out.write("\n");
-      out.write("            <br />\n");
-      out.write("        \n");
-      out.write("        </div>\n");
-      out.write("</div>\n");
-      out.write("</body>\n");
-      out.write("</html>\n");
+      out.write("\r\n");
+      out.write("                        </select>\r\n");
+      out.write("                        \r\n");
+      out.write("                    </div>\r\n");
+      out.write("                        <br/>\r\n");
+      out.write("                    <hr/>\r\n");
+      out.write("                    <input type=\"submit\" value=\"Saber média\" name=\"btnConfirmar\"  /> \r\n");
+      out.write("              \r\n");
+      out.write("                \r\n");
+      out.write("            </div>\r\n");
+      out.write("        \r\n");
+      out.write("        <div class=\"painelUsuario\">\r\n");
+      out.write("\r\n");
+      out.write("            <br />\r\n");
+      out.write("        \r\n");
+      out.write("        </div>\r\n");
+      out.write("</div>\r\n");
+      out.write("</body>\r\n");
+      out.write("</html>\r\n");
       out.write(" ");
       out.write("\r\n");
       out.write("\r\n");
@@ -246,6 +247,7 @@ public final class professorIndex_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("</body>\r\n");
       out.write("\r\n");
       out.write("</html>\r\n");
+      out.write('\r');
       out.write('\n');
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
