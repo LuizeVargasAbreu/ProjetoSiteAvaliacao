@@ -78,26 +78,26 @@
                                     <!-- /input-group -->
                                 </li>
                                 <li>
-                                    <a href="index.jsp"><i class="fa fa-dashboard fa-fw"></i> Menu de inicio</a>
+                                    <a href="index.jsp"><i class="fa fa-dashboard fa-fw"></i> Menu de início</a>
                                 </li>
 
                                 <li>
                                     <a href="#"><i class="fa fa-sitemap fa-fw"></i>Clique aqui<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level">
                                         <li>
-                                            <a href="professorIndex.jsp">Professores</a>
+                                            <a href="professorIndex.jsp">Média Professores</a>
                                         </li>
                                         <li>
-                                            <a href="monitorIndex.jsp">Monitores</a>
+                                            <a href="monitorIndex.jsp">Média Monitores</a>
                                         </li>
                                         <li>
                                             <a href="#">Clique aqui <span class="fa arrow"></span></a>
                                             <ul class="nav nav-third-level">
                                                 <li>
-                                                    <a href="professorQuestionario.jsp">Questionario professor</a>
+                                                    <a href="professorQuestionario.jsp">Questionário professor</a>
                                                 </li>
                                                 <li>
-                                                    <a href="monitorQuestionario.jsp">Questionario monitor</a>
+                                                    <a href="monitorQuestionario.jsp">Questionário monitor</a>
                                                 </li>
                                                 <li>
                                                     <a href="index.jsp">Index</a>
