@@ -231,7 +231,7 @@ public class MoniAval implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.MoniAval[ idMoniaval=" + idMoniaval + " ]";
+        return "id-" + idMoniaval;
     }
     
 }

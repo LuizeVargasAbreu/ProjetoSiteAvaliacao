@@ -226,7 +226,7 @@ public class Questionario implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Questionario[ idQuestionario=" + idQuestionario + " ]";
+        return  "id-" + idQuestionario;
     }
     
 }

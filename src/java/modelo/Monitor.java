@@ -118,7 +118,7 @@ public class Monitor implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Monitor[ idMonitor=" + idMonitor + " ]";
+        return idMonitor + "-" + monNome;
     }
     
 }
