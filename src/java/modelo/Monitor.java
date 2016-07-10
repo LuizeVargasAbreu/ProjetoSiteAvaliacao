@@ -16,16 +16,13 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Aluno
+ * @author ferna
  */
 @Entity
 @Table(name = "monitor")
-@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Monitor.findAll", query = "SELECT m FROM Monitor m")})
 public class Monitor implements Serializable {
@@ -83,7 +80,6 @@ public class Monitor implements Serializable {
         this.monNome = monNome;
     }
 
-    @XmlTransient
     public List<Disciplina> getDisciplinaList() {
         return disciplinaList;
     }
@@ -92,7 +88,6 @@ public class Monitor implements Serializable {
         this.disciplinaList = disciplinaList;
     }
 
-    @XmlTransient
     public List<MoniAval> getMoniAvalList() {
         return moniAvalList;
     }
@@ -123,7 +118,7 @@ public class Monitor implements Serializable {
 
     @Override
     public String toString() {
-         return idMonitor + "-" + monNome;
+        return "modelo.Monitor[ idMonitor=" + idMonitor + " ]";
     }
     
 }

@@ -18,13 +18,12 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Aluno
+ * @author ferna
  */
 @Entity
 @Table(name = "disciplina")
 @NamedQueries({
     @NamedQuery(name = "Disciplina.findAll", query = "SELECT d FROM Disciplina d")})
-    @NamedQuery(name = "Disciplina.findByName", query = "SELECT d FROM Disciplina d where d.discNome like :discNome")
 public class Disciplina implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -131,7 +130,7 @@ public class Disciplina implements Serializable {
 
     @Override
     public String toString() {
-        return idDisciplina + "-" + discNome;
+        return "modelo.Disciplina[ idDisciplina=" + idDisciplina + " ]";
     }
     
 }

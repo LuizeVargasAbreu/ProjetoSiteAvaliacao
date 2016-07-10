@@ -16,16 +16,13 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Aluno
+ * @author ferna
  */
 @Entity
 @Table(name = "professor")
-@XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Professor.findAll", query = "SELECT p FROM Professor p")})
 public class Professor implements Serializable {
@@ -83,7 +80,6 @@ public class Professor implements Serializable {
         this.profNome = profNome;
     }
 
-    @XmlTransient
     public List<Disciplina> getDisciplinaList() {
         return disciplinaList;
     }
@@ -92,7 +88,6 @@ public class Professor implements Serializable {
         this.disciplinaList = disciplinaList;
     }
 
-    @XmlTransient
     public List<ProfAval> getProfAvalList() {
         return profAvalList;
     }
@@ -123,7 +118,7 @@ public class Professor implements Serializable {
 
     @Override
     public String toString() {
-         return idProfessor + "-" + profNome;
+        return "modelo.Professor[ idProfessor=" + idProfessor + " ]";
     }
     
 }

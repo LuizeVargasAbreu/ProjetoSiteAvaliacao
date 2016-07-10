@@ -21,7 +21,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Aluno
+ * @author ferna
  */
 @Entity
 @Table(name = "moni_aval")
