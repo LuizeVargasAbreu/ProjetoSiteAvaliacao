@@ -190,8 +190,8 @@ public final class professorIndex_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                <form action=\"professorIndex-ok.jsp\" method=\"post\">\r\n");
       out.write("                    <div class=\"form-group\">\r\n");
       out.write("                        <label>Selecione o professor que você deseja saber a média de seu desempenho</label>\r\n");
-      out.write("                        <select class=\"form-control\" id=\"idProfessor\" name=\"idProfessor\" value=\"");
-      out.print(profe.getIdProfessor());
+      out.write("                        <select class=\"form-control\" id=\"nomeProfessor\" name=\"nomeProfessor\" value=\"");
+      out.print(profe.getProfNome());
       out.write("\">\r\n");
       out.write("                            <option value=\"\">Selecione..</option>\r\n");
       out.write("                            ");
@@ -200,7 +200,7 @@ public final class professorIndex_jsp extends org.apache.jasper.runtime.HttpJspB
                             
       out.write("\r\n");
       out.write("                            <option value=\"");
-      out.print(p.getIdProfessor());
+      out.print(p.getProfNome());
       out.write('"');
       out.write('>');
       out.print(p);

@@ -17,13 +17,13 @@
         lista = dao.listar();
     }
 
-    if (request.getParameter("idProfessor") == null) {
+    if (request.getParameter("nomeProfessor") == null) {
         response.sendRedirect("index.jsp");
     } else {
 
         Professor prof = new Professor();
         ProfAval profAval = new ProfAval();
-        Long nomeProfessor = Long.parseLong(request.getParameter("nomeProfessor"));
+        String nomeProfessor = request.getParameter("nomeProfessor");
 
         for (Professor item : lista) {
             if (item.getProfNome().equals(nomeProfessor)) {
