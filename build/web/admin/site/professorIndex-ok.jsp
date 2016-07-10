@@ -8,9 +8,7 @@
 
     ProfAvalDAO dao2 = new ProfAvalDAO();
     List<ProfAval> lista2;
-//Verificar se veio algo do filtro, 
-//se vier eu filtro pro nome
-//caso contrário eu trago todos os professores
+
     if (request.getParameter("txtFiltro") != null && request.getParameter("txtFiltro") != "") {
         String txtFiltro = request.getParameter("txtFiltro");
         lista2 = dao2.listar(txtFiltro);
@@ -21,9 +19,7 @@
 
     ProfessorDAO dao = new ProfessorDAO();
     List<Professor> lista;
-//Verificar se veio algo do filtro, 
-//se vier eu filtro pro nome
-//caso contrário eu trago todos os professores
+
     if (request.getParameter("txtFiltro") != null && request.getParameter("txtFiltro") != "") {
         String txtFiltro = request.getParameter("txtFiltro");
         lista = dao.listar(txtFiltro);
