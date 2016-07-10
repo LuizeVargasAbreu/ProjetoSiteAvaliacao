@@ -15,12 +15,12 @@
                 <form action="professorIndex-ok.jsp" method="post">
                     <div class="form-group">
                         <label>Selecione o professor que você deseja saber a média de seu desempenho</label>
-                        <select class="form-control" id="idProfessor" name="idProfessor" value="<%=profe.getIdProfessor()%>">
+                        <select class="form-control" id="nomeProfessor" name="nomeProfessor" value="<%=profe.getProfNome()%>">
                             <option value="">Selecione..</option>
                             <%
                                 for (Professor p : pList) {
                             %>
-                            <option value="<%=p.getIdProfessor()%>"><%=p%></option>
+                            <option value="<%=p.getProfNome()%>"><%=p%></option>
                         <%
                             }
                         %>
