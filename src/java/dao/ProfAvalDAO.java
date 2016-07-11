@@ -1,5 +1,6 @@
 package dao;
 
+import java.math.BigInteger;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -45,6 +46,13 @@ public class ProfAvalDAO {
          
          query.setParameter("nome", '%' + nome + '%');
          return query.getResultList();
+    }
+    public BigInteger verMedia(Long idProfessor) throws Exception {
+        TypedQuery<ProfAval> query =
+                em.createNamedQuery("ProfAval.findMedia", ProfAval.class);
+        
+        query.setParameter("id_professor",'%' + idProfessor + '%');
+        return query.getFirstResult();
     }
     
     public void alterar(ProfAval obj) throws Exception {

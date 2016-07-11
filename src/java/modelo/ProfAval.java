@@ -26,7 +26,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "prof_aval")
 @NamedQueries({
-    @NamedQuery(name = "ProfAval.findAll", query = "SELECT p FROM ProfAval p")})
+    @NamedQuery(name = "ProfAval.findAll", query = "SELECT p FROM ProfAval p"),
+    @NamedQuery(name= "ProfAval.findMedia", query = "SELECT avg(pa_resposta1), avg(pa_resposta2), avg(pa_resposta3), avg(pa_resposta4), avg(pa_resposta5), avg(pa_resposta6), avg(pa_resposta7), avg(pa_resposta8), avg(pa_resposta9), avg(pa_resposta10),\n" +
+"       avg( (pa_resposta1 + pa_resposta2 + pa_resposta3 + pa_resposta4 + pa_resposta5 + pa_resposta6 + pa_resposta7 + pa_resposta8 + pa_resposta9 + pa_resposta10) / 10) \n" +
+"from prof_aval\n" +
+"where id_professor = idProfessor")
+})
 public class ProfAval implements Serializable {
 
     private static final long serialVersionUID = 1L;
