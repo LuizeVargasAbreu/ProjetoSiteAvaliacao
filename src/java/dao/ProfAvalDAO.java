@@ -1,9 +1,9 @@
 package dao;
 
-import java.math.BigInteger;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import modelo.ProfAval;
 
@@ -48,13 +48,10 @@ public class ProfAvalDAO {
          return query.getResultList();
     }
     
-    public Double verMedia(Long idProfessor) throws Exception {
-        TypedQuery<ProfAval> query =
-                em.createNamedQuery("ProfAval.findMedia", ProfAval.class);
-        
-        query.setParameter("id_professor",'%' + idProfessor + '%');
-        double media = bi1.doubleValue();
-        return query.getSingleResult();
+    public double verMedia(Long idProfessor) throws Exception {
+        Query q = em.createQuery("select avg(s.transfusionUnits) from Surgery s");
+        Double actual = (Double) q.getSingleResult();
+        return actual;
     }
     
     public void alterar(ProfAval obj) throws Exception {

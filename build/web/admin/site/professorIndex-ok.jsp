@@ -6,7 +6,7 @@
 <%@page import="modelo.Professor"%>
 <%@include file="cabecalho.jsp"%>
 <%
-    BigInteger media = new BigInteger("0");
+    Double media = 0.0;
     
     if (request.getParameter("idProfessor") == null) {
         response.sendRedirect("index.jsp");
@@ -16,6 +16,7 @@
         ProfAval profAval = new ProfAval();
         Long idProfessor = Long.parseLong(request.getParameter("idProfessor"));
         media = dao.verMedia(idProfessor);
+        out.print(media); 
         
     }
     
