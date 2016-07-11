@@ -47,12 +47,13 @@ public class ProfAvalDAO {
          query.setParameter("nome", '%' + nome + '%');
          return query.getResultList();
     }
+    
     public BigInteger verMedia(Long idProfessor) throws Exception {
         TypedQuery<ProfAval> query =
                 em.createNamedQuery("ProfAval.findMedia", ProfAval.class);
         
         query.setParameter("id_professor",'%' + idProfessor + '%');
-        return query.getFirstResult();
+        return query.getSingleResult();
     }
     
     public void alterar(ProfAval obj) throws Exception {
