@@ -49,9 +49,15 @@ public class ProfAvalDAO {
     }
     
     public double verMedia(Long idProfessor) throws Exception {
+      //  TypedQuery<Double> query = em.createQuery("select ((pa_resposta1 + pa_resposta2 + pa_resposta3 + pa_resposta4 + pa_resposta5 + "
+        //    + "pa_resposta6 + pa_resposta7 + pa_resposta8 + pa_resposta9 + pa_resposta10) / 10 from ProfAval p where p.id_professor = :idProfessor", Double.class);
+//query.setParameter("idProfessor", '%' + idProfessor + '%');
+//double avg = query.getSingleResult();
+//return avg;
         Query q = em.createQuery("select avg(s.transfusionUnits) from Surgery s");
         Double actual = (Double) q.getSingleResult();
         return actual;
+        
     }
     
     public void alterar(ProfAval obj) throws Exception {

@@ -29,7 +29,7 @@ import javax.persistence.Table;
     @NamedQuery(name = "ProfAval.findAll", query = "SELECT p FROM ProfAval p"),
     @NamedQuery(name = "ProfAval.findMedia", query = "SELECT avg( (pa_resposta1 + pa_resposta2 + pa_resposta3 + pa_resposta4 + pa_resposta5 + "
             + "pa_resposta6 + pa_resposta7 + pa_resposta8 + pa_resposta9 + pa_resposta10) / 10) " +
-"from prof_aval where id_professor = idProfessor")
+"FROM ProfAval p where p.id_professor = :idProfessor")
 })
 public class ProfAval implements Serializable {
 
