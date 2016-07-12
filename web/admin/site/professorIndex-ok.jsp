@@ -34,7 +34,6 @@
 
         List<Questionario> qList = qdao.listar();
 
-        q = qList.get(1);
         
         Long idProfessor = Long.parseLong(request.getParameter("idProfessor"));
         media = dao.verMedia(idProfessor);
