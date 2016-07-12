@@ -1,5 +1,6 @@
 package dao;
 
+import java.math.BigDecimal;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -48,17 +49,81 @@ public class ProfAvalDAO {
          return query.getResultList();
     }
     
-    public double verMedia(Long idProfessor) throws Exception {
-      //  TypedQuery<Double> query = em.createQuery("select ((pa_resposta1 + pa_resposta2 + pa_resposta3 + pa_resposta4 + pa_resposta5 + "
-        //    + "pa_resposta6 + pa_resposta7 + pa_resposta8 + pa_resposta9 + pa_resposta10) / 10 from ProfAval p where p.id_professor = :idProfessor", Double.class);
-//query.setParameter("idProfessor", '%' + idProfessor + '%');
-//double avg = query.getSingleResult();
-//return avg;
-        Query q = em.createQuery("select avg(s.transfusionUnits) from Surgery s");
-        Double actual = (Double) q.getSingleResult();
+    public BigDecimal verMedia(Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta1 + p.pa_resposta2 + p.pa_resposta3 + p.pa_resposta4 + p.pa_resposta5 + "
+            + "p.pa_resposta6 + p.pa_resposta7 + p.pa_resposta8 + p.pa_resposta9 + p.pa_resposta10) / 10), 2) media " +
+"FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual =  (BigDecimal) q.getSingleResult();
         return actual;
         
     }
+    
+    public BigDecimal verMedia1 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta1) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    public BigDecimal verMedia2 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta2) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    public BigDecimal verMedia3 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta3) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    public BigDecimal verMedia4 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta4) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    
+    public BigDecimal verMedia5 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta5) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    
+    public BigDecimal verMedia6 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta6) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    
+    public BigDecimal verMedia7 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta7) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    
+    public BigDecimal verMedia8 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta8) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    
+    public BigDecimal verMedia9 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta9) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
+    
+    public BigDecimal verMedia10 (Long idProfessor) throws Exception {
+        Query q = em.createNativeQuery("SELECT round(avg( (p.pa_resposta10) ),2) FROM prof_aval p where p.id_professor = " + idProfessor + "");
+        BigDecimal actual = (BigDecimal) q.getSingleResult();
+        return actual;
+    }
+    
     
     public void alterar(ProfAval obj) throws Exception {
         
