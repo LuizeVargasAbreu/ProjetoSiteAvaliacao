@@ -5,6 +5,7 @@
 <%@page import="modelo.Monitor"%>
 <%@page import="dao.MoniAvalDAO"%>
 <%@page import="java.math.BigDecimal"%>
+<%@include file="cabecalho.jsp"%>
 <%
     String p1="", p2="", p3="", p4="", p5="", p6="", p7="",p8="", p9="", p10="";
     BigDecimal media = BigDecimal.ZERO;
@@ -65,9 +66,9 @@
 
 
 %>
-   <h0 class="centro">Média dos monitores</h0>
+   <h1 class="centro">Média dos monitores</h1>
    <br />
-   <h4>As notas estão de base 5, onde Ruim = 0 e Excelente = 5</h4><br />
+   <h4>As notas estão de base 5, onde Ruim = 1 e Excelente = 5</h4><br />
    Média geral: <%=media%><br /><br />
    Média da pergunta "<%=p1%>": <%=media1%><br /><br />
    Média da pergunta "<%=p2%>": <%=media2%><br /><br />

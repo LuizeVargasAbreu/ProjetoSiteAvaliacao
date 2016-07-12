@@ -13,9 +13,9 @@
     
         <div class="pergunta">
             <div class="opcoes">
-                <form action="monissorIndex-ok.jsp" method="post">
+                <form action="monitorIndex-ok.jsp" method="post">
                     <div class="form-group">
-                        <label>Selecione o monissor que você deseja saber a média de seu desempenho</label>
+                        <label>Selecione o monitor que você deseja saber a média de seu desempenho</label>
                         <select class="form-control" id="idMonitor" name="idMonitor" value="<%=moni.getIdMonitor()%>">
                             <option value="">Selecione..</option>
                             <%
