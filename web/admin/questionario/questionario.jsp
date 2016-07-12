@@ -41,11 +41,6 @@
                         <th>Id</th>
                         <th>Período</th>
                         <th>Pergunta1</th>
-                        <th>Pergunta2</th>
-                        <th>Pergunta3</th>
-                        <th>Pergunta4</th>
-                        <th>Pergunta5</th>
-                        <th>Pergunta6</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -57,11 +52,6 @@
                         <td><%=obj.getIdQuestionario()%></td>
                         <td><%=obj.getQuestPeriodo()%></td>
                         <td><%=obj.getPergunta1()%></td>
-                        <td><%=obj.getPergunta2()%></td>
-                        <td><%=obj.getPergunta3()%></td>
-                        <td><%=obj.getPergunta4()%></td>
-                        <td><%=obj.getPergunta5()%></td>
-                        <td><%=obj.getPergunta6()%></td>
                         <td>
                             <!-- 
                                 Atualizar 
